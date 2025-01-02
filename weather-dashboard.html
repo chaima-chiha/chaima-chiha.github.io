@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Météo Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .weather-card {
+            transition: transform 0.3s ease;
+        }
+        .weather-card:hover {
+            transform: translateY(-5px);
+        }
+        .gradient-primary {
+            background: linear-gradient(135deg, #00d1b2, #009f86);
+        }
+        .gradient-info {
+            background: linear-gradient(135deg, #3298dc, #2793da);
+        }
+        .custom-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="has-background-light">
+    <section class="section">
+        <div class="container">
+            <!-- Header -->
+            <h1 class="title is-2 has-text-centered mb-6">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </span>
+                    <span>Nabeul, Tunisie</span>
+                </span>
+            </h1>
+
+            <!-- Main Weather Card -->
+            <div class="card weather-card custom-shadow mb-6 gradient-primary">
+                <div class="card-content">
+                    <div class="columns is-vcentered">
+                        <div class="column">
+                            <p class="title is-1 has-text-white">22°C</p>
+                            <p class="subtitle is-4 has-text-white">Ensoleillé</p>
+                        </div>
+                        <div class="column has-text-right">
+                            <span class="icon is-large">
+                                <i class="fas fa-sun fa-3x has-text-warning"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather Details -->
+            <div class="columns is-multiline mb-6">
+                <div class="column is-half">
+                    <div class="card weather-card custom-shadow">
+                        <div class="card-content">
+                            <div class="level">
+                                <div class="level-left">
+                                    <div>
+                                        <p class="heading">Humidité</p>
+                                        <p class="title">65%</p>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <span class="icon has-text-info is-large">
+                                        <i class="fas fa-tint fa-2x"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card weather-card custom-shadow">
+                        <div class="card-content">
+                            <div class="level">
+                                <div class="level-left">
+                                    <div>
+                                        <p class="heading">Vent</p>
+                                        <p class="title">12 km/h</p>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <span class="icon has-text-info is-large">
+                                        <i class="fas fa-wind fa-2x"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Forecast -->
+            <div class="columns is-multiline">
+                <!-- Lundi -->
+                <div class="column is-one-seventh-desktop is-half-mobile">
+                    <div class="card weather-card custom-shadow gradient-info">
+                        <div class="card-content">
+                            <p class="has-text-white has-text-centered has-text-weight-bold mb-2">Lundi</p>
+                            <div class="has-text-centered">
+                                <span class="icon is-large">
+                                    <i class="fas fa-sun fa-2x has-text-warning"></i>
+                                </span>
+                                <p class="title is-4 has-text-white mt-2">22°C</p>
+                                <p class="subtitle is-6 has-text-white">16°C</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mardi -->
+                <div class="column is-one-seventh-desktop is-half-mobile">
+                    <div class="card weather-card custom-shadow gradient-info">
+                        <div class="card-content">
+                            <p class="has-text-white has-text-centered has-text-weight-bold mb-2">Mardi</p>
+                            <div class="has-text-centered">
+                                <span class="icon is-large">
+                                    <i class="fas fa-cloud fa-2x has-text-white"></i>
+                                </span>
+                                <p class="title is-4 has-text-white mt-2">24°C</p>
+                                <p class="subtitle is-6 has-text-white">17°C</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mercredi -->
+                <div class="column is-one-seventh-desktop is-half-mobile">
+                    <div class="card weather-card custom-shadow gradient-info">
+                        <div class="card-content">
+                            <p class="has-text-white has-text-centered has-text-weight-bold mb-2">Mercredi</p>
+                            <div class="has-text-centered">
+                                <span class="icon is-large">
+                                    <i class="fas fa-cloud-rain fa-2x has-text-white"></i>
+                                </span>
+                                <p class="title is-4 has-text-white mt-2">19°C</p>
+                                <p class="subtitle is-6 has-text-white">15°C</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Jeudi -->
+                <div class="column is-one-seventh-desktop is-half-mobile">
+                    <div class="card weather-card custom-shadow gradient-info">
+                        <div class="card-content">
+                            <p class="has-text-white has-text-centered has-text-weight-bold mb-2">Jeudi</p>
+                            <div class="has-text-centered">
+                                <span class="icon is-large">
+                                    <i class="fas fa-bolt fa-2x has-text-warning"></i>
+                                </span>
+                                <p class="title is-4 has-text-white mt-2">21°C</p>
+                                <p class="subtitle is-6 has-text-white">16°C</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vendredi -->
+                <div class="column is-one-seventh-desktop is-half-mobile">
+                    <div class="card weather-card custom-shadow gradient-info">
+                        <div class="card-content">
+                            <p class="has-text-white has-text-centered has-text-weight-bold mb-2">Vendredi</p>
+                            <div class="has-text-centered">
+                                <span class="icon is-large">
+                                    <i class="fas fa-sun fa-2x has-text-warning"></i>
+                                </span>
+                                <p class="title is-4 has-text-white mt-2">23°C</p>
+                                <p class="subtitle is-6 has-text-white">18°C</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Samedi -->
+                <div class="column is-one-seventh-desktop is-half-mobile">
+                    <div class="card weather-card custom-shadow gradient-info">
+                        <div class="card-content">
+                            <p class="has-text-white has-text-centered has-text-weight-bold mb-2">Samedi</p>
+                            <div class="has-text-centered">
+                                <span class="icon is-large">
+                                    <i class="fas fa-cloud-sun fa-2x has-text-warning"></i>
+                                </span>
+                                <p class="title is-4 has-text-white mt-2">25°C</p>
+                                <p class="subtitle is-6 has-text-white">19°C</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dimanche -->
+                <div class="column is-one-seventh-desktop is-half-mobile">
+                    <div class="card weather-card custom-shadow gradient-info">
+                        <div class="card-content">
+                            <p class="has-text-white has-text-centered has-text-weight-bold mb-2">Dimanche</p>
+                            <div class="has-text-centered">
+                                <span class="icon is-large">
+                                    <i class="fas fa-cloud fa-2x has-text-white"></i>
+                                </span>
+                                <p class="title is-4 has-text-white mt-2">22°C</p>
+                                <p class="subtitle is-6 has-text-white">17°C</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
